@@ -169,7 +169,17 @@ const Home = () => {
                                 className="w-full px-4 py-2 rounded bg-[#2d3748] border border-gray-600 text-white"
                             ></textarea>
                         </div>
-
+                        <div className="mb-6 text-left">
+                            <label htmlFor="message" className="block mb-1 text-sm font-semibold">
+                                Nearby Landmark or Address
+                            </label>
+                            <textarea
+                                id="message"
+                                rows="1"
+                                placeholder="Write a short message..."
+                                className="w-full px-4 py-2 rounded bg-[#2d3748] border border-gray-600 text-white"
+                            ></textarea>
+                        </div>
                         <button
                             type="submit"
                             className="bg-gradient-to-r from-[#ff5f00] to-[#ff6f00] px-6 py-2 rounded-full font-semibold hover:brightness-110 transition"
