@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Home = () => {
-    const navigate = useNavigate(); // Hook to navigate on button click
+    const navigate = useNavigate();
 
     const menuItems = [
         { name: 'Home', hasSubmenu: false },
@@ -39,7 +39,7 @@ const Home = () => {
 
     const handleParentLoginSubmit = (e) => {
         e.preventDefault();
-        navigate('/signup'); // Redirect to signup page
+        navigate('/dashboard');
     };
 
     return (
@@ -71,7 +71,7 @@ const Home = () => {
                             className="text-white text-[2.5rem] md:text-[3rem] leading-[1.1] font-bold mb-4"
                             style={{ fontFamily: '"Baloo 2", cursive' }}
                         >
-                            For The Child &amp;
+                            For The Child &
                             <br />
                             Cause You Care About
                         </h1>
@@ -89,18 +89,7 @@ const Home = () => {
                             <h2 className="text-2xl font-bold mb-6 text-[#ff6f00] text-center">
                                 Parent Login
                             </h2>
-                            {/* <label className="block mb-2 text-sm font-semibold" htmlFor="parentName">
-                                Name
-                            </label>
-                            <input
-                                id="parentName"
-                                name="parentName"
-                                type="text"
-                                required
-                                placeholder="Enter your name"
-                                className="w-full px-4 py-2 mb-4 rounded bg-[#1a202e] border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                            /> */}
-                            <label className="block mb-2 text-sm font-semibold" htmlFor="parentPassword">
+                            <label className="block mb-2 text-sm font-semibold" htmlFor="parentMobile">
                                 Mobile Number
                             </label>
                             <input
@@ -128,18 +117,16 @@ const Home = () => {
                             >
                             <Link to="/dashboard" className="block mt-3 text-sm text-center text-white-500 hover:underline">
                                 Login
-                            </Link>
-
+                                /</Link>
                             </button>
                             <Link to="/admin" className="block mt-4 text-sm text-center text-orange-400 hover:underline">
                                 Are you an admin? Click here
                             </Link>
-                                <Link to="/signup" className="block mt-4 text-sm text-center text-orange-400 hover:underline">
+                            <Link to="/signup" className="block mt-2 text-sm text-center text-orange-400 hover:underline">
                                 Signup as a Parent
                             </Link>
                         </form>
                     </div>
-                
                 </div>
             </main>
 
