@@ -34,6 +34,7 @@ import ParentLogin from './pages/ParentLogin';
 import DashboardAdmin from './pages/dashboardAdmin';
 import Admin from './pages/admin';
 import Dashboard from './components/Dashboard';
+import AdminLogin from './pages/AdminLogin';
 
 function App() {
   return (
@@ -43,8 +44,10 @@ function App() {
         <Route path="/signup" element={<ParentSignup />} />
         <Route path="/login" element={<ParentLogin />} />
         {/* <Route path="/admin" element={<Admin />} /> */}
-        <Route path="/admin" element={<DashboardAdmin />} />
+        {/* <Route path="/admin" element={<DashboardAdmin />} /> */}
+        <Route path="/admin" element={<AdminLogin />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboardAdmin" element={<DashboardAdmin />} /> {/* Add this line */}
       </Routes>
     </Router>
   );
