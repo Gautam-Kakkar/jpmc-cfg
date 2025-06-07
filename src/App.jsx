@@ -39,6 +39,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Pages
 import Home from './components/Home';
 import ParentSignup from './pages/ParentSignup';
+import ParentLogin from './pages/ParentLogin';
 // import AdminLogin from './pages/AdminLogin'; // Optional
 
 // Components
@@ -52,7 +53,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<ParentSignup />} />
-        {/* <Route path="/admin" element={<AdminLogin />} /> */}
+        {/* <Route path="/admin" element={<Admin />} /> */}
+        <Route path="/login" element={<ParentLogin />} />
       </Routes>
     </Router>
   );

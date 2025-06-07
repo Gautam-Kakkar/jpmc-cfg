@@ -89,7 +89,7 @@ const Home = () => {
                             <h2 className="text-2xl font-bold mb-6 text-[#ff6f00] text-center">
                                 Parent Login
                             </h2>
-                            <label className="block mb-2 text-sm font-semibold" htmlFor="parentName">
+                            {/* <label className="block mb-2 text-sm font-semibold" htmlFor="parentName">
                                 Name
                             </label>
                             <input
@@ -99,6 +99,17 @@ const Home = () => {
                                 required
                                 placeholder="Enter your name"
                                 className="w-full px-4 py-2 mb-4 rounded bg-[#1a202e] border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            /> */}
+                            <label className="block mb-2 text-sm font-semibold" htmlFor="parentPassword">
+                                Mobile Number
+                            </label>
+                            <input
+                                id="parentMobile"
+                                name="parentMobile"
+                                type="tel"
+                                required
+                                placeholder="Enter your Mobile Number"
+                                className="w-full px-4 py-2 mb-6 rounded bg-[#1a202e] border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
                             />
                             <label className="block mb-2 text-sm font-semibold" htmlFor="parentPassword">
                                 Password
@@ -111,22 +122,24 @@ const Home = () => {
                                 placeholder="Enter your password"
                                 className="w-full px-4 py-2 mb-4 rounded bg-[#1a202e] border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
                             />
-                            <input
-                                id="parentMobile"
-                                name="parentMobile"
-                                type="tel"
-                                required
-                                placeholder="Enter your Mobile Number"
-                                className="w-full px-4 py-2 mb-6 rounded bg-[#1a202e] border border-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                            />
                             <button
                                 type="submit"
                                 className="w-full bg-gradient-to-r from-[#ff5f00] to-[#ff6f00] py-2 rounded-full text-white font-semibold hover:brightness-110 transition"
                             >
-                                Signup
+                            <Link to="/" className="block mt-3 text-sm text-center text-white-500 hover:underline">
+                                Login
+                            </Link>
+
                             </button>
+                            <Link to="/admin" className="block mt-4 text-sm text-center text-orange-400 hover:underline">
+                                Are you an admin? Click here
+                            </Link>
+                                <Link to="/signup" className="block mt-4 text-sm text-center text-orange-400 hover:underline">
+                                Signup as a Parent
+                            </Link>
                         </form>
                     </div>
+                
                 </div>
             </main>
 
