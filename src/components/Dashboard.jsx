@@ -7,57 +7,60 @@ const Dashboard = () => {
   const [children, setChildren] = useState([
     {
       id: 1,
-      name: "Sarah Johnson",
-      age: 8,
-      grade: "3rd Grade",
-      image: "https://images.pexels.com/photos/1620760/pexels-photo-1620760.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+      name: "ABC",
+      age: 3,
+      // grade: "3rd Grade",
+      image: "#",
       subjects: {
-        math: 85,
-        english: 92,
-        science: 78,
-        social: 88
+        social: 85,
+        physical: 92,
+        asthetic: 78,
+        cognitive: 88,
+        emotional: 90
       },
       overallProgress: 86,
-      attendance: 95,
+      // attendance: 95,
       lastUpdate: "2 days ago",
-      activities: ["Reading Club", "Art Class"],
-      nextGoal: "Improve Math scores"
+      activities: ["Level 2"],
+      nextGoal: "Imporove Eating Habits"
     },
     {
       id: 2,
-      name: "Ahmed Hassan",
-      age: 10,
-      grade: "5th Grade", 
-      image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+      name: "XYZ",
+      age: 1,
+      // grade: "5th Grade",
+      image: "#",
       subjects: {
-        math: 78,
-        english: 85,
-        science: 90,
-        social: 82
+        social: 85,
+        physical: 92,
+        asthetic: 78,
+        cognitive: 88,
+        emotional: 90
       },
       overallProgress: 84,
       attendance: 88,
       lastUpdate: "1 week ago",
-      activities: ["Soccer Team", "Science Club"],
-      nextGoal: "Perfect attendance"
+      activities: ["Level 1"],
+      nextGoal: "Improve Coginitive Skills"
     },
     {
       id: 3,
-      name: "Maria Santos",
-      age: 7,
-      grade: "2nd Grade",
-      image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+      name: "PQR",
+      age: "8 months",
+      // grade: "2nd Grade",
+      image: "#",
       subjects: {
-        math: 70,
-        english: 88,
-        science: 75,
-        social: 80
+        social: 85,
+        physical: 92,
+        asthetic: 78,
+        cognitive: 88,
+        emotional: 90
       },
       overallProgress: 78,
       attendance: 92,
       lastUpdate: "3 days ago",
-      activities: ["Dance Class", "Library Helper"],
-      nextGoal: "Math improvement program"
+      activities: ["Level 1"],
+      nextGoal: "Enhance Physical Activities"
     }
   ]);
 
@@ -128,22 +131,7 @@ const Dashboard = () => {
             </div>
 
             {/* Navigation Links */}
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
-                <a href="#" className="text-[#ff5f00] font-medium px-3 py-2 rounded-md text-sm border-b-2 border-[#ff5f00]">
-                  Dashboard
-                </a>
-                <a href="#" className="text-gray-600 hover:text-[#ff5f00] px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                  Progress Reports
-                </a>
-                <a href="#" className="text-gray-600 hover:text-[#ff5f00] px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                  Activities
-                </a>
-                <a href="#" className="text-gray-600 hover:text-[#ff5f00] px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                  Messages
-                </a>
-              </div>
-            </div>
+              
 
             {/* Right side - Notifications and Profile */}
             <div className="flex items-center space-x-4">
