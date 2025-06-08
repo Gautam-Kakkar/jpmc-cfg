@@ -9,10 +9,10 @@ const AdminLogin = () => {
         navigate('/dashboardAdmin');
     };
   return (
-  <div className="min-h-screen flex items-center justify-center bg-[#1a202e]">
+  <div className="min-h-screen flex items-center justify-center bg-white">
     <div className="md:w-1/2 relative flex justify-center items-center">
       <form
-        className="bg-[#2d3748] p-8 rounded-lg shadow-lg w-full max-w-md text-white"
+        className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md text-white"
         onSubmit={handleAdminLoginSubmit}
       >
                             <h2 className="text-2xl font-bold mb-6 text-[#ff6f00] text-center">

@@ -38,6 +38,7 @@ import AaravInfo from './pages/aaravinfo';
 import Resources from './components/Resources';
 import Forms from './pages/Forms';
 import Milestone from './pages/Milestone';
+import AdminLogin from './pages/AdminLogin';
 
 function App() {
   return (
@@ -46,12 +47,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<ParentSignup />} />
         {/* <Route path="/login" element={<ParentLogin />} /> */}
-        <Route path="/admin" element={<DashboardAdmin />} />
+        <Route path="/dashboardadmin" element={<DashboardAdmin />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/aaravinfo" element={<AaravInfo />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/form" element={<Forms />} />
         <Route path="/milestone" element={<Milestone />} />
+        <Route path="/adminlogin" element={<AdminLogin />} />
       </Routes>
     </Router>
   );

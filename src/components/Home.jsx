@@ -138,7 +138,7 @@
                     Login
                 </Link>
                 </button>
-                <Link to="/admin" className="block mt-4 text-sm text-center text-orange-500 hover:underline">
+                <Link to="/adminlogin" className="block mt-4 text-sm text-center text-orange-500 hover:underline">
                     Are you an admin? Click here
                 </Link>
                 <Link to="/signup" className="block mt-2 text-sm text-center text-orange-500 hover:underline">
