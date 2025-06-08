@@ -1,76 +1,78 @@
 import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line, Area, AreaChart } from 'recharts';
+import { useNavigate } from 'react-router-dom';
 
 const DashboardAdmin = () => {
   const [showFilteredChildren, setShowFilteredChildren] = useState(false);
+  const navigate = useNavigate();
 
   // Sample data for children
   const allChildren = [
     {
       id: 1,
-      name: 'Amina Hassan',
-      age: 8,
-      location: 'Nairobi, Kenya',
+      name: 'Aarav Sharma',
+      age: 3,
+      location: 'Delhi, India',
       progress: 85,
       status: 'Connected',
       photo: 'https://images.pexels.com/photos/1620760/pexels-photo-1620760.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
-      subjects: { math: 80, english: 90, science: 85, social: 85 },
-      volunteer: 'Sarah Johnson'
+      subjects: { social: 80, emotional: 90, physical: 85, cognitive: 88, aesthetic: 82 },
+      volunteer: 'Priya Singh'
     },
     {
       id: 2,
-      name: 'Rahul Sharma',
-      age: 10,
+      name: 'Ishaan Patel',
+      age: 7,
       location: 'Mumbai, India',
       progress: 65,
       status: 'Needs Support',
       photo: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
-      subjects: { math: 60, english: 70, science: 65, social: 65 },
-      volunteer: 'Michael Chen'
+      subjects: { social: 60, emotional: 70, physical: 65, cognitive: 62, aesthetic: 68 },
+      volunteer: 'Rohit Mehra'
     },
     {
       id: 3,
-      name: 'Fatima Al-Zahra',
-      age: 7,
-      location: 'Lagos, Nigeria',
+      name: 'Diya Nair',
+      age: 5,
+      location: 'Bangalore, India',
       progress: 92,
       status: 'Excellent',
       photo: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
-      subjects: { math: 95, english: 90, science: 92, social: 90 },
-      volunteer: 'Emma Wilson'
+      subjects: { social: 95, emotional: 90, physical: 92, cognitive: 94, aesthetic: 90 },
+      volunteer: 'Anjali Rao'
     },
     {
       id: 4,
-      name: 'Carlos Rodriguez',
-      age: 9,
-      location: 'Mexico City, Mexico',
+      name: 'Kabir Verma',
+      age: 6,
+      location: 'Kolkata, India',
       progress: 58,
       status: 'Needs Support',
       photo: 'https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
-      subjects: { math: 55, english: 60, science: 58, social: 60 },
-      volunteer: 'David Martinez'
+      subjects: { social: 55, emotional: 60, physical: 58, cognitive: 59, aesthetic: 57 },
+      volunteer: 'Sunita Joshi'
     },
     {
       id: 5,
-      name: 'Aisha Patel',
-      age: 11,
-      location: 'Delhi, India',
+      name: 'Meera Desai',
+      age: 8,
+      location: 'Ahmedabad, India',
       progress: 78,
       status: 'Good Progress',
       photo: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
-      subjects: { math: 75, english: 80, science: 78, social: 80 },
-      volunteer: 'Lisa Anderson'
+      subjects: { social: 75, emotional: 80, physical: 78, cognitive: 79, aesthetic: 77 },
+      volunteer: 'Vikas Kumar'
     },
     {
       id: 6,
-      name: 'Omar Abdullah',
-      age: 6,
-      location: 'Cairo, Egypt',
+      name: 'Riya Gupta',
+      age: 4,
+      location: 'Chennai, India',
       progress: 45,
       status: 'Critical Support',
       photo: 'https://images.pexels.com/photos/1068205/pexels-photo-1068205.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
-      subjects: { math: 40, english: 50, science: 45, social: 45 },
-      volunteer: 'Ahmed Hassan'
+      subjects: { social: 40, emotional: 50, physical: 45, cognitive: 42, aesthetic: 48 },
+      volunteer: 'Neha Agarwal'
     }
   ];
 
@@ -91,20 +93,24 @@ const DashboardAdmin = () => {
 
   const subjectData = [
     {
-      subject: 'Math',
-      average: Math.round(allChildren.reduce((acc, child) => acc + child.subjects.math, 0) / allChildren.length)
-    },
-    {
-      subject: 'English',
-      average: Math.round(allChildren.reduce((acc, child) => acc + child.subjects.english, 0) / allChildren.length)
-    },
-    {
-      subject: 'Science',
-      average: Math.round(allChildren.reduce((acc, child) => acc + child.subjects.science, 0) / allChildren.length)
-    },
-    {
       subject: 'Social',
       average: Math.round(allChildren.reduce((acc, child) => acc + child.subjects.social, 0) / allChildren.length)
+    },
+    {
+      subject: 'Emotional',
+      average: Math.round(allChildren.reduce((acc, child) => acc + child.subjects.emotional, 0) / allChildren.length)
+    },
+    {
+      subject: 'Physical',
+      average: Math.round(allChildren.reduce((acc, child) => acc + child.subjects.physical, 0) / allChildren.length)
+    },
+    {
+      subject: 'Cognitive',
+      average: Math.round(allChildren.reduce((acc, child) => acc + child.subjects.cognitive, 0) / allChildren.length)
+    },
+    {
+      subject: 'Aesthetic',
+      average: Math.round(allChildren.reduce((acc, child) => acc + child.subjects.aesthetic, 0) / allChildren.length)
     }
   ];
 
@@ -212,7 +218,13 @@ const DashboardAdmin = () => {
           
           <div className="flex space-x-6 overflow-x-auto pb-4">
             {allChildren.slice(0, 8).map((child) => (
-              <div key={child.id} className="flex-shrink-0 text-center">
+              <div
+                key={child.id}
+                className="flex-shrink-0 text-center cursor-pointer"
+                onClick={() => {
+                  if (child.name === 'Aarav Sharma') navigate('/aaravinfo');
+                }}
+              >
                 <div className="relative">
                   <img
                     className="w-16 h-16 rounded-full object-cover mx-auto mb-2 border-4 border-white shadow-lg"
