@@ -122,6 +122,7 @@ function ParentSignup() {
         <button
           type="submit"
           className="w-full bg-gradient-to-r from-[#ff5f00] to-[#ff6f00] py-2 rounded-full text-white font-semibold hover:brightness-110 transition"
+        onClick={handleSubmit}
         >
           Register
         </button>
